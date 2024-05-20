@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rain Animation</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        body {
+            background: #0f2027;
+            background: -webkit-linear-gradient(to right, #2c5364, #203a43, #0f2027);
+            background: linear-gradient(to right, #2c5364, #203a43, #0f2027);
+            height: 100vh;
+            margin: 0;
+            overflow: hidden;
+        }
+        .rain {
+            position: absolute;
+            width: 2px;
+            height: 80px;
+            background: rgba(255, 255, 255, 0.6);
+            bottom: 100%;
+            animation: fall linear infinite;
+        }
+        @keyframes fall {
+            to {
+                transform: translateY(100vh);
+            }
+        }
+    </style>
+</head>
+<body class="flex items-center justify-center">
+    <div id="rain-container"></div>
+    <script src="script.js"></script>
+</body>
+</html>
